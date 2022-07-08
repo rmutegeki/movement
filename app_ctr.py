@@ -101,82 +101,82 @@ class MaicatControl:
 		exit()
         if self.cmd_nm in [1]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_sitdown2.py -x 1 -c "
+	      call_data = "python movement_sitdown2.py -x 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = self.cmd_nm; self.posture = self.cmd_nm_prev
 	   if self.cmd_nm_prev in [7]:
-	      call_data = "sudo python movement_sitdown2falldown.py -r 1 -c "
+	      call_data = "python movement_sitdown2falldown.py -r 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 1; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [2]:
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2eat.py -x 1 -st 2 -c "
+	      call_data = "python movement_sitdown2eat.py -x 1 -st 2 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [3]:
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2stretch1.py -x 1 -c "
+	      call_data = "python movement_sitdown2stretch1.py -x 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [4]:
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2kneading.py -x 1 -c "
+	      call_data = "python movement_sitdown2kneading.py -x 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [5]:
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2punch.py -c "
+	      call_data = "python movement_sitdown2punch.py -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [6]:
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2lick.py -c "
+	      call_data = "python movement_sitdown2lick.py -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [7]:
 	   if self.cmd_nm_prev in [21]:
-	      subprocess.call("sudo python cmd_headaction.py -a 1", shell=True)
-	      call_data = "sudo python movement_sitdown2.py -x 1 -c  "
+	      subprocess.call("python cmd_headaction.py -a 1", shell=True)
+	      call_data = "python movement_sitdown2.py -x 1 -c  "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 1; self.posture = self.cmd_nm_prev
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2falldown.py -r 0 -c "
+	      call_data = "python movement_sitdown2falldown.py -r 0 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = self.cmd_nm; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [8]:
 	   if self.cmd_nm_prev in [7]:
-	      call_data = "sudo python movement_sitdown2falldown.py -r 1 -c "
+	      call_data = "python movement_sitdown2falldown.py -r 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 1; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [9]:
 	   if self.cmd_nm_prev in [7]:
-	      call_data = "sudo python movement_uplift.py -r 0 -x 1 -c 1"
+	      call_data = "python movement_uplift.py -r 0 -x 1 -c 1"
 	      call_process = call_data
 	      subprocess.call(call_process, shell=True)
 
-	      call_data = "sudo python movement_ready.py -c 1"
+	      call_data = "python movement_ready.py -c 1"
 	      call_process = call_data
 	      subprocess.call(call_process, shell=True)
 
-	      call_data = "sudo python movement_uplift.py -r 1 -x 1 -c "
+	      call_data = "python movement_uplift.py -r 1 -x 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 
@@ -185,21 +185,21 @@ class MaicatControl:
 
         if self.cmd_nm in [21]:
 	   if self.cmd_nm_prev in [7]:
-	      subprocess.call("sudo python cmd_headaction.py -a 1", shell=True)
-	      call_data = "sudo python movement_sitdown2falldown.py -r 1 -c  "
+	      subprocess.call("python cmd_headaction.py -a 1", shell=True)
+	      call_data = "python movement_sitdown2falldown.py -r 1 -c  "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 1; self.posture = self.cmd_nm_prev
 
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_standup2.py -x 1 -c "
+	      call_data = "python movement_standup2.py -x 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = self.cmd_nm; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [22]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_shake_rl.py -x 1 -c "
+	      call_data = "python movement_shake_rl.py -x 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 
 	      if self.cmd_nm_prev in [1]: call_data_n = "-ns -0.5 -ne -0.5 -nm 0.2 -c "
@@ -212,42 +212,42 @@ class MaicatControl:
 
         if self.cmd_nm in [23]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_walk.py -d Front -so 0.1 -st 3 -c "
+	      call_data = "python movement_walk.py -d Front -so 0.1 -st 3 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 21; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [24]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_walk.py -d FrontRight -so 0.1 -st 2 -c "
+	      call_data = "python movement_walk.py -d FrontRight -so 0.1 -st 2 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 21; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [25]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_walk.py -d FrontLeft -so 0.1 -st 2 -c "
+	      call_data = "python movement_walk.py -d FrontLeft -so 0.1 -st 2 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 21; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [26]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_walk.py -d Back -so -0.1 -st 1 -c "
+	      call_data = "python movement_walk.py -d Back -so -0.1 -st 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 21; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [27]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_walk.py -d BackRight -so -0.05 -st 1 -c "
+	      call_data = "python movement_walk.py -d BackRight -so -0.05 -st 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 21; self.posture = self.cmd_nm_prev
 
         if self.cmd_nm in [28]:
 	   if self.cmd_nm_prev in [21]:
-	      call_data = "sudo python movement_walk.py -d BackLeft -so -0.05 -st 1 -c "
+	      call_data = "python movement_walk.py -d BackLeft -so -0.05 -st 1 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 21; self.posture = self.cmd_nm_prev
@@ -260,10 +260,10 @@ class MaicatControl:
 	if self.cmd_nm in [32]:
 	   if self.sound_opt in [1]:
 	      self.sound_opt = 0
-	      subprocess.call("sudo python cmd_volum.py -v 0", shell=True)
+	      subprocess.call("python cmd_volum.py -v 0", shell=True)
 	   else: 
 	      self.sound_opt = 1
-	      subprocess.call("sudo python cmd_volum.py -v 30", shell=True)
+	      subprocess.call("python cmd_volum.py -v 30", shell=True)
 
 	if self.cmd_nm in [41]: self.posture = 7; self.cmd_nm_prev = self.posture
 	if self.cmd_nm in [42]: self.posture = 1; self.cmd_nm_prev = self.posture
@@ -272,20 +272,20 @@ class MaicatControl:
 
         if self.cmd_nm in [51]:
 	   if self.cmd_nm_prev in [21]:
-	      subprocess.call("sudo python cmd_headaction.py -a 1", shell=True)
-	      call_data = "sudo python movement_sitdown2.py -x 1 -c  "
+	      subprocess.call("python cmd_headaction.py -a 1", shell=True)
+	      call_data = "python movement_sitdown2.py -x 1 -c  "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 1; self.posture = self.cmd_nm_prev
 
 	   if self.cmd_nm_prev in [1]:
-	      call_data = "sudo python movement_sitdown2falldown.py -r 0 -c "
+	      call_data = "python movement_sitdown2falldown.py -r 0 -c "
 	      call_process = call_data + str(self.joint_fix)
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 7; self.posture = self.cmd_nm_prev
 
 	   if self.cmd_nm_prev in [7]:
-	      call_data = "sudo python maicat_control.py -status 3"
+	      call_data = "python maicat_control.py -status 3"
 	      call_process = call_data
 	      subprocess.call(call_process, shell=True)
 	      self.cmd_nm_prev = 1; self.posture = self.cmd_nm_prev
