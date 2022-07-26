@@ -143,6 +143,8 @@ class MoveACT:
 	step_cnt = 11
 	sn_switch = [3,4,5, 0,1,2, 10,11,12,13, 6,7,8,9]   # r/l reversal
 
+#	time.sleep(0.5)
+
         for cnt in range(step_cnt):
 
 	    for cnv in range(14):
@@ -187,7 +189,7 @@ class MoveACT:
 #		   print self.frn, sn_target, target_radian 
 		self.pwm.setTarget(sn_target, target_angle)
 
-	    time.sleep(0.07)
+	    time.sleep(0.0) # 0.07
 
 	    if self.walk_type in ["Front", "FrontLeft", "FrontRight"]: self.fln += 1; self.frn += 1; self.rln += 1; self.rrn += 1
 	    if self.walk_type in ["Back", "BackLeft", "BackRight"]: self.fln -= 1; self.frn -= 1; self.rln -= 1; self.rrn -= 1
@@ -340,27 +342,27 @@ class MoveACT:
         self.f_trajs[5] = [0.12,0.0,-0.94]
         self.f_trajs[6] = [0.19,0.0,-0.98]
         self.f_trajs[7] = [0.3,0.0,-0.82]
-        self.f_trajs[8] = [0.56,0.0,-0.27]
-        self.f_trajs[9] = [0.35,0.0,-0.27]
-        self.f_trajs[10] = [-0.06,0.0,-0.53]
+        self.f_trajs[8] = [0.56,0.0,-0.65]   #-0.27 
+        self.f_trajs[9] = [0.35,0.0,-0.65]   #-0.27
+        self.f_trajs[10] = [-0.06,0.0,-0.68] #-0.53
         self.f_trajs[11] = [-0.55,0.0,-1.57]
 	motor_direction = [0.2, 0.1, -0.2] #0.1, 0, -0.2
         self.f_trajs = np.add(self.f_trajs, motor_direction)
 
         # rear left leg trajectory
         self.r_trajs = np.zeros((12, 4))
-        self.r_trajs[0] = [0.07,0.0,0.51,-0.71]
-        self.r_trajs[1] = [0.21,0.0,0.52,-0.73]
-        self.r_trajs[2] = [0.18,0.0,0.21,-0.69]
-        self.r_trajs[3] = [-0.19,0.0,0.06,-0.69]
-        self.r_trajs[4] = [-0.56,0.0,0.11,-0.69]
-        self.r_trajs[5] = [-0.60,0.0,0.58,-0.81]
-        self.r_trajs[6] = [-0.37,0.0,0.75,-1.04]
-        self.r_trajs[7] = [-0.33,0.0,0.64,-0.84]
-        self.r_trajs[8] = [-0.27,0.0,0.56,-0.78]
-        self.r_trajs[9] = [-0.19,0.0,0.51,-0.71]
-        self.r_trajs[10] = [-0.09,0.0,0.49,-0.69]
-        self.r_trajs[11] = [-0.00,0.0,0.49,-0.69]
+        self.r_trajs[0] = [0.07,0.0,0.51,-0.71] # 0.51 -0.71
+        self.r_trajs[1] = [0.21,0.0,0.52,-0.73] # 0.52 -0.73
+        self.r_trajs[2] = [0.18,0.0,0.21,-0.69]  # 0.21 -0.69
+        self.r_trajs[3] = [-0.19,0.0,0.06,-0.69] #0.06 -0.69
+        self.r_trajs[4] = [-0.56,0.0,0.11,-0.69] #0.11 -0.69
+        self.r_trajs[5] = [-0.60,0.0,0.58,-0.81] #0.58 -0.81
+        self.r_trajs[6] = [-0.37,0.0,0.75,-1.04]  #0.75 -1.04
+        self.r_trajs[7] = [-0.33,0.0,0.64,-0.84]  #0.64 -0.84
+        self.r_trajs[8] = [-0.27,0.0,0.56,-0.78] # 0.56 -0.78
+        self.r_trajs[9] = [-0.19,0.0,0.51,-0.71] # 0.51 -0.71
+        self.r_trajs[10] = [-0.09,0.0,0.49,-0.69] # 0.49 -0.69
+        self.r_trajs[11] = [-0.00,0.0,0.49,-0.69] # 0.49 -0.69
 	motor_direction = [-0.1, 0, -0.2, 0.3]
         self.r_trajs = np.add(self.r_trajs, motor_direction)
 

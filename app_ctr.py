@@ -36,8 +36,9 @@ class MaicatControl:
         self.sound_opt = 1
 
         self.cmd_nm = int(args.cmd)
-	self.app_position_save()
         self._command_action()
+    
+        self.app_position_save()
 
     def app_position_save(self):
 
@@ -46,7 +47,7 @@ class MaicatControl:
         f = open("app_position.txt", 'w')
 
 	if self.cmd_nm in [99, 100]: data = 7
-        else: data = self.cmd_nm
+        else: data = self.posture
 
         f.write(str(data))
         f.close()
@@ -322,7 +323,7 @@ class MaicatControl:
 
         if self.cmd_nm in [100]: 
 	   self.stop()
-	   call_data = "shutdown now"
+	   call_data = "sudo shutdown now"
 	   call_process = call_data
 	   subprocess.call(call_process, shell=True)
            exit()
@@ -342,6 +343,8 @@ class MaicatControl:
 	   subprocess.call(call_process, shell=True)
 
         self._disconnect_all()
+
+	self.app_position_save()
 
     def _disconnect_all(self):
         for sn in range(18):
